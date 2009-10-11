@@ -1,0 +1,117 @@
+% resume.tex
+%
+% (c) 2002 Matthew M. Boedicker <mboedick@mboedick.org> http://mboedick.org
+% $Id: resume.tex,v 1.7 2004/02/02 14:21:06 mboedick Exp $
+%
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage[dvipdf,pdftitle={Resume},colorlinks=true,urlcolor=blue]{hyperref}
+\textheight=9.0in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\begin{document}
+
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+\textbf{Patrick T. Ramsey}  & \\
+31-70 34th St.  & (508) 333-6120 \\
+Apt. 3A & ptr@amie.st \\
+Astoria, NY 11106 & \\
+\end{tabular*}
+\\
+\vspace{0.1in}
+{\large \textbf{Education}}
+
+	\begin{itemize}
+	\item 
+	\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+		\textbf{Brown University} & Providence, RI \\
+		Computer Science A.B., December 2007 & \\
+	\end{tabular*}
+
+	\end{itemize}
+
+
+{\large \textbf{Work History}}
+
+\begin{itemize}
+
+    \item
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+            \textbf{Software Engineer} & January 2008 --- Present \\
+            \href{http://www.amie.st/}{Amie Street, Inc.} & Long Island City, NY \\
+        \end{tabular*}
+        \begin{itemize}
+            \item Helped maintain a large web application written in PHP using MySQL as the backend database
+            \item Developed a large and extensible content ingestion and backup system in python
+            \item Wrote and maintained small thrift services written in Python, Perl and Ruby
+            \item Managed the ingestion component of our integration with major labels
+            \item Assisted in the administration and upkeep of our office network, including
+                \begin{itemize}
+                    \item Configuring and maintaining vpn and ssh
+                    \item Extending and maintaining configuration/package management service
+                    \item Managing local APT repository/cache
+                    \item Setting up regular snapshotting on our fileserver
+                    \item Installing and setting up new machines
+                \end{itemize}
+        \end{itemize}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item 
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+            \textbf{Student Programmer, Operator, and Consultant (\href{http://cs.brown.edu/people/tstaff/spoc/}{SPOC})} & June --- December, 2007 \\
+            \href{http://cs.brown.edu/}{Brown University CS Department} & Providence, RI \\
+        \end{tabular*}
+        \begin{itemize}
+            \item Handled off-hours technical support for department faculty, staff, and students
+            \item Used, maintained, and documented the home-grown administration tools for the department linux machines
+            \item Installed, supported, and configured Debian and Windows (XP and Vista) desktops
+        \end{itemize}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item
+        \begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+            \textbf{Assistant} & January 2006 \\
+            Your Heaven, Inc. & Providence, RI \\
+        \end{tabular*}
+
+        \begin{itemize}
+            \item Soldering together circuit boards for use in digital audio recording
+            \item Programming in C and SHARC assembly
+        \end{itemize}
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{itemize}
+
+{\large \textbf{Technical Skills}}
+
+\begin{description}
+\item[Languages and Frameworks:]
+    Python (and sqlalchemy), PHP, Perl, Bourne shell, Ruby (and ActiveRecord) and MySQL.  Also, some experience in Java, OCaml, C and C++.
+\item[Software and Services:]
+    OpenVPN, OpenSSH, iptables, puppet, xen, 
+\item[Operating Systems:]
+I'm comfortable handling administrative tasks in Debian and Ubuntu GNU/Linux, MacOS 9 and X and Windows.  I've also spent some time using Fedora, OpenSuSE, and OpenSolaris in a professional environment.  I learn quickly. 
+
+\end{description}
+
+{\large \textbf{Relevant Course Work}}
+\begin{itemize}
+    \item
+        \begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+            \textbf{CS 167/169} & Fall 2006 \\
+            Operating Systems & \\
+        \end{tabular*}
+    \item
+        \begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
+            \textbf{CS 160} & Summer-Fall 2007 (Developed and TAed) \\
+            Embedded and Real-Time Programming & \\
+        \end{tabular*}
+\end{itemize}
+
+{\large \textbf{Miscellaneous}}
+
+\begin{itemize}
+    \item I am a founding member and former president and secretary of the \href{http://blug.brown.edu/}{Brown Linux User Group}
+\end{itemize}
+\end{document}
