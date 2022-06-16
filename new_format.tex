@@ -43,8 +43,8 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 \titleformat{\subsection}{
-    \vspace{-10pt}\color{black!40}\sffamily\bfseries\raggedright\footnotesize
-}{}{0em}{\vspace{-10pt}}
+    \vspace{-10pt}\color{black!50}\sffamily\raggedright\footnotesize
+}{}{0em}{\vspace{-8pt}}
 
 %-------------------------
 % Custom commands
@@ -86,18 +86,12 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{{\LARGE Patrick Taylor Ramsey}} & Email: \href{mailto:}{ptr@ptr.xyz}\\
-  \href{https://www.linkedin.com/in/patrick-ramsey-2bb73a27/}{LinkedIn} & Mobile:~~~(508) 333-6120 \\
+    LinkedIn: \url{https://www.linkedin.com/in/ptramsey/} & Mobile:~~~\href{tel:+15083336120}{(508) 333-6120} \\
 \end{tabular*}
 
-%-----------EDUCATION-----------------
-\section{~~Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Brown University}{Providence, RI}
-      {Computer Science A.B.}{December 2007}
-      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses:} Operating Systems (CS167 / CS169)}}}
-    \resumeSubHeadingListEnd
-	    
+\section{Overview}
+Hello I am a rat
+
 \vspace{-5pt}
 \section{Skills Summary}
 	\resumeSubHeadingListStart
@@ -112,48 +106,62 @@
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading{Fivestars Loyalty, Inc.}{San Francisco, CA}
-    {Staff Software Engineer}{September}
-    \subsection{Engineering and Problem Solving}
+    {Staff Software Engineer}{Sep 2013 - Present}
+    \subsection{~~Engineering and Problem Solving}
       \resumeItemListStart
         \resumeItem{Instore Client}{Owned and managed the native layer of our hybrid tablet payments app}
-        \resumeItem{Pax a920 Port}{Ported the native parts of our hybrid app to the Pax A920 Payment Terminal and implemented support for its card reader and payments backend. 
-        \resumeItem{Client Android 5 Backport}{Backported our Instore app to Android 5 in one month after it was discovered at the last minute that we wouldn't be able to target more recent Android}
+        \resumeItem{Pax a920 Port}{Ported the native parts of our hybrid app to the Pax A920 Payment Terminal and implemented support for its card reader and payments backend}
+        \resumeItem{Android 5 Backport}{Backported our payments app to Android 5 in one month of effort after it was discovered at the last minute that we wouldn't be able to target more recent Android}
         \resumeItem{Receipt Parsing}{Created ML models to identify receipts in raw printer data and extract transaction values.  Lead development of a Flask service to host those models as part of our strategy for integrating with Windows point of sale terminals}
         \resumeItem{Virtual Printer/Reverse Proxy}{Implemented a generic TCP/UDP reverse proxy and virtual receipt printer as part of our strategy for integrating with Windows point of sale terminals}
         \resumeItem{Clover Integration}{Lead development of our project to integrate our original loyalty offering with Clover's point of sale, which remained in use by over 1000 of our merchants three years later}
         \resumeItem{Windows Port}{Made significant contributions at every stage of development to the Windows port of our hybrid tablet loyalty application}
-        \resumeItem{Bathroom Monitor}{Part of a team that built a sensor system and website to monitor when the office's few bathrooms were available}
+        \resumeItem{Bathroom Monitor}{Helped build a sensor system and website to monitor when the office's few bathrooms were available}
       \resumeItemListEnd
 
-    \subsection{Infrastructure Improvements}
+    \subsection{~~Infrastructure Improvements}
       \resumeItemListStart
-        \resumeItem{Vault}{Selected Hashicorp Vault as our secrets management solution, and implemented a proof of concept deployment on Kubernetes}
+        \resumeItem{Vault}{Selected Hashicorp Vault as our secrets management solution, implemented a proof of concept on Kubernetes using the BanzaiCloud operator and toolset, and ran a successful architecture review}
         \resumeItem{Poetry}{Diagnosed a major issue resulting from an implicit python package dependency version change before the issue hit production.  Selected Poetry as our new package management solution for python projects, and drove adoption across the organization}
         \resumeItem{Migration to Amazon RDS}{Migrated our production Postgres instance out of Heroku with an hour of site downtime and no major issues, reducing our monthly database hosting costs by a factor of ten}
         \resumeItem{Mothership}{With two other engineers, created the docker-based tooling that deployed our production services for four years}
       \resumeItemListEnd
 
-    \subsection{Communication and Community Building}
+    \subsection{~~Communication and Community Building}
       \resumeItemListStart
         \resumeItem{Dev Workshop}{Founded and led an organization-wide monthly forum for learning and information sharing}
         \resumeItem{Post-Mortems}{Led several post-mortems to broadcast learnings and invite discussion about production issues and dev process misses}
         \resumeItem{Documentation}{Maintained detailed wiki and README documentation on the tools I owned and contributed to}
       \resumeItemListEnd
 
-    \subsection{Teaching and Mentorship}
+    \subsection{~~Teaching and Mentorship}
       \resumeItemListStart
-        \resumeItem{Intern Program}{Managed three amazing interns over the years, each of whom made meaningful and lasting contributions to our services and customer-facing clients}
+        \resumeItem{Intern Program}{Managed and mentored three amazing interns over the years, each of whom made meaningful and lasting contributions to our services and customer-facing clients}
+      \resumeItemListEnd
 
-\vspace{-5pt}
+\vspace{5pt}
     \resumeSubheading
-		{DataCamp Inc.}{Remote}
-		{Instructor (Part-time, Contractual)}{Dec 2018 -  Present}
+		{Cloudera, Inc.}{Palo Alto, CA}
+        {Software Engineer}{Jan 2011 -  Sep 2013}
 		\resumeItemListStart
-        \resumeItem{Project Course - Find Movie Similarity from Plot Summaries}
-          {Created project based course using Unsupervised learning and natural language processing.}
-        \resumeItem{Tutorial - Introduction to Reinforcement Learning}
-          {Created tutorial for Q-learning RL algorithm and  concepts.}
-        \resumeItem{Impact}{Course has been taken by 250+ students so far with 4.65 average rating.}
+            \resumeItem{Apache Bigtop}{Maintained rpm/debian packaging for Cloudera's build toolchain and earned committership on the \href{http://bigtop.apache.org/}{Apache Bigtop} project}
+            \resumeItem{Dev and Test}{Scaled OS provisioning and configuration management for multiple operating systems to 850 physical hosts}
+		\resumeItemListEnd
+
+\vspace{5pt}
+    \resumeSubheading
+		{Lime Company}{New York, NY}
+        {Junior Linux Systems Administrator}{Dec 2009 - Dec 2010}
+		\resumeItemListStart
+            \resumeItem{Grapevine}{Assisted in infrastructure planning, coding, and deployment of a new music store application to AWS}
+		\resumeItemListEnd
+
+\vspace{5pt}
+    \resumeSubheading
+		{Amie Street, Inc.}{Long Island City, NY}
+        {Software Engineer}{Jan 2008 - Dec 2009}
+		\resumeItemListStart
+            \resumeItem{EAT}{Developed multiple generations of our music store's content ingestion and backup system, including our integration with a major label}
 		\resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -166,18 +174,14 @@
 
 \end{description}
 
+%-----------EDUCATION-----------------
 \vspace{-5pt}
-\section{Volunteer Experience}
+\section{Education}
   \resumeSubHeadingListStart
-	\resumeSubheading
-    {Community Lead at Developer Student Clubs NSEC}{Kolkata, India}
-    {Conducted online and offline technical \& soft-skills training impacting over 3000 students.}{Jan 2019 - Present}
-\vspace{5pt}
-    % \vspace{10pt}\textbf{\large{Community Experience}}
     \resumeSubheading
-    {Event Organizer at Google Developers Group Kolkata}{Kolkata, India}
-    {Organized events, conducted workshops and delivered workshops reaching over 7000 developers.}{Jan 2018 - Present}
-
-\resumeSubHeadingListEnd
-
+      {Brown University}{Providence, RI}
+      {Computer Science A.B.}{December 2007}
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses:} Operating Systems (CS167 / CS169)}}}
+    \resumeSubHeadingListEnd
+	    
 \end{document}
