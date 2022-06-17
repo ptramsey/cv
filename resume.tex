@@ -1,99 +1,190 @@
-% resume.tex
-%
-% (c) 2002 Matthew M. Boedicker <mboedick@mboedick.org> http://mboedick.org
-% $Id: resume.tex,v 1.7 2004/02/02 14:21:06 mboedick Exp $
-%
-\documentclass[10pt]{article}
-\usepackage{fullpage}
-\usepackage[pdftitle={Patrick T. Ramsey},colorlinks=true,urlcolor=blue]{hyperref}
-\textheight=9.0in
-\pagestyle{empty}
+%------------------------
+% Resume Template
+% Author : Anubhav Singh
+% Github : https://github.com/xprilion
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+%\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+\titleformat{\subsection}{
+    \vspace{-10pt}\color{black!50}\sffamily\raggedright\footnotesize
+}{}{0em}{\vspace{-8pt}}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
 \begin{document}
 
-\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-\textbf{Patrick T. Ramsey}  & \\
-3620 17th St.  & (508) 333-6120 \\
-Apt. B & ptr@ptr.xyz \\
-San Francisco, CA 94114 & \\
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Patrick Taylor Ramsey}} & Email: \href{mailto:}{ptr@ptr.xyz}\\
+    LinkedIn: \url{https://www.linkedin.com/in/ptramsey/} & Mobile:~~~\href{tel:+15083336120}{(508) 333-6120} \\
 \end{tabular*}
-\\
-\vspace{0.1in}
-{\large \textbf{Education}}
 
-	\begin{itemize}
-	\item 
-	\begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
-		\textbf{Brown University} & Providence, RI \\
-		Computer Science A.B., December 2007 & \\
-	\end{tabular*}
+\section{Overview}
+I am a software engineer generalist and problem solver, with a long track record of jumping into new and unfamiliar material and quickly building a deep and nuanced understanding.  I thrive on diagnosing subtle issues in complex systems, and am at my best when I have an enigma I can sink my teeth into -- whether it be an unexplained failure in an existing system, or a new and exciting tool or platform.
 
-	\end{itemize}
+\vspace{5pt}
 
-{\large \textbf{Technical Skills}}
+I am also an excellent communicator!  The parts of my job I enjoy the most involve teaching, supporting new engineers, and learning from my colleagues.  I find public speaking fun, and enjoy figuring out how to craft documentation that is not only informative but actually useful.  Above all else, I value connection and mutual understanding, and will always endeavor to make sure everyone feels heard and is on the same page.
 
-\begin{itemize}
-    \item Python (scikit-learn, Twisted, Django), Javascript (AngularJS), Java (Android, Cordova), Kotlin, HTML/CSS, Postgresql
-    \item Managed applications in AWS using EC2, CloudFront, RDS, S3, Redshift, Lambda, CloudFormation
-\end{itemize}
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{~~~~~~Python, Java, Kotlin, Typescript, SQL, Shell}
+	\resumeSubItem{Frameworks}{~~~~Kotlin-Multiplatform, Scikit-Learn, Twisted, Django, Cordova, React, Redux-Saga, Flask}
+	\resumeSubItem{Tools}{~~~~~~~~~~~~~~Kubernetes, Docker, GIT, Postgres, Android Studio}
+	\resumeSubItem{Platforms}{~~~~~~~Linux, AWS, Android, Windows, Web}
+    \resumeSubItem{Soft Skills}{~~~~~~~Writing, Public Speaking, Mentorship, Teaching, Community-Building}
 
-{\large \textbf{Work History}}
+\resumeSubHeadingListEnd
+\vspace{-5pt}
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Fivestars Loyalty, Inc.}{San Francisco, CA}
+    {Staff Software Engineer}{Sep 2013 - Present}
+    \subsection{~~Engineering and Problem Solving}
+      \resumeItemListStart
+        \resumeItem{Instore Client}{Owned and managed the native layer of our hybrid tablet payments app}
+        \resumeItem{Pax a920 Port}{Ported the native parts of our hybrid app to the Pax A920 Payment Terminal and implemented support for its card reader and payments backend}
+        \resumeItem{Android 5 Backport}{Backported our payments app to Android 5 in one month of effort after it was discovered at the last minute that we wouldn't be able to target more recent Android}
+        \resumeItem{Receipt Parsing}{Created ML models to identify receipts in raw printer data and extract transaction values.  Lead development of a Flask service to host those models as part of our strategy for integrating with Windows point of sale terminals}
+        \resumeItem{Virtual Printer/Reverse Proxy}{Implemented a generic TCP/UDP reverse proxy and virtual receipt printer as part of our strategy for integrating with Windows point of sale terminals}
+        \resumeItem{Clover Integration}{Lead development of our project to integrate our original loyalty offering with Clover's point of sale, which remained in use by over 1000 of our merchants three years later}
+        \resumeItem{Windows Port}{Made significant contributions at every stage of development to the Windows port of our hybrid tablet loyalty application, which remains in use at over 4000 merchants}
+        \resumeItem{Bathroom Monitor}{Helped build a sensor system and website to monitor when the office's few bathrooms were available}
+      \resumeItemListEnd
 
-\begin{itemize}
-    \item
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
-            \textbf{Software Engineer} & September 2013 --- Present \\
-            \href{http://www.fivestars.com/}{Fivestars Loyalty, Inc.} & San Francisco, CA \\
-        \end{tabular*}
-        \begin{itemize}
-            \item Founded and led Dev Workshop, a monthly forum for learning and information sharing across the engineering organization.
-            \item Ported all the native components of our tablet application to a new and very different device.  Successfully backported it to Android 5 in a month of effort.
-            \item Wrote the native components of our new single-device app, including supporting a new credit card reader and payments backend.
-            \item Selected Vault and began the organization-wide transition to using it for secrets management
-            \item Initiated transition to Poetry for dependecy tracking in python projects organization-wide
-            \item Lead development of an ML-based service to extract transaction data from printed receipts, enabling closer integration with our loyalty product at more than 1000 locations.
-            \item Designed and built a virtual printer/reverse proxy to capture receipts on their way to a real printer for use with the above service.
-            \item Lead development of a direct API integration with Clover's Point of Sale, currently in use at more than 1200 of our merchants.
-            \item Singlehandedly migrated our production Postgres instance from Heroku to Amazon RDS with an hour of downtime and no issues.
-            \item Contributed significantly to the port of our tablet client to Windows, to replace our aging native client.
-            \item Mentored three interns, each of whom made meaningful and lasting contributions to the aforementioned receipt data extraction service and Windows client.
-            \item With two other engineers, created the tooling that deployed our production services for four years.
-            \item Wrote a service to monitor office bathrooms for availability.
-        \end{itemize}
-    \item
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
-            \textbf{Software Engineer} & January 2011 --- September 2013 \\
-            \href{http://www.cloudera.com/}{Cloudera, Inc.} & Palo Alto, CA \\
-        \end{tabular*}
-        \begin{itemize}
-            \item Maintained rpm/debian packaging for Cloudera build toolchain and earned committership on the \href{http://bigtop.apache.org/}{Apache Bigtop} project.
-            \item Developed, enhanced and maintained engineering infrastructure in a highly heterogeneous large scale environment.  Scaled configuration management and OS provisioning to 850 hosts.
-        \end{itemize}
-    \item
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
-            \textbf{Junior Linux Systems Administrator} & December 2009 --- December 2010 \\
-            \href{http://www.limewire.com/}{Lime Company} & New York, NY \\
-        \end{tabular*}
-        \begin{itemize}
-            \item Assisted in infrastructure planning, coding, and deployment of a new music store application to AWS.
-            \item Assisted in administration and maintenence of production infrastructure.
-        \end{itemize}
+    \subsection{~~Infrastructure Improvements}
+      \resumeItemListStart
+        \resumeItem{Vault}{Selected Hashicorp Vault as our secrets management solution, implemented a proof of concept on Kubernetes using the BanzaiCloud operator and toolset, and ran a successful architecture review}
+        \resumeItem{Poetry}{Diagnosed a major issue resulting from an implicit python package dependency version change before the issue hit production.  Selected Poetry as our new package management solution for python projects, and drove adoption across the organization}
+        \resumeItem{Migration to Amazon RDS}{Migrated our production Postgres instance out of Heroku with an hour of site downtime and no major issues, reducing our monthly database hosting costs by a factor of ten}
+        \resumeItem{Mothership}{With two other engineers, created the docker-based tooling that deployed our production services for four years}
+      \resumeItemListEnd
 
-    \item
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \begin{tabular*}{6in}{l@{\extracolsep{\fill}}r}
-            \textbf{Software Engineer} & January 2008 --- December 2009 \\
-            \href{http://www.amie.st/}{Amie Street, Inc.} & Long Island City, NY \\
-        \end{tabular*}
-        \begin{itemize}
-            \item Developed a large and extensible content ingestion and backup system in python, and managed the ingestion component of our integration with a major music label.
-        \end{itemize}
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{itemize}
+    \subsection{~~Communication and Community Building}
+      \resumeItemListStart
+        \resumeItem{Dev Workshop}{Founded and led an organization-wide monthly forum for learning and information sharing}
+        \resumeItem{Post-Mortems}{Led several post-mortems to broadcast learnings and invite discussion about production issues and dev process misses}
+        \resumeItem{Documentation}{Maintained detailed wiki and README documentation on the tools I owned and contributed to}
+      \resumeItemListEnd
 
+    \subsection{~~Teaching and Mentorship}
+      \resumeItemListStart
+        \resumeItem{Intern Mentor}{Managed and mentored three amazing interns over the years, each of whom made meaningful and lasting contributions to our services and customer-facing clients}
+      \resumeItemListEnd
+
+\vspace{5pt}
+    \resumeSubheading
+		{Cloudera, Inc.}{Palo Alto, CA}
+        {Software Engineer}{Jan 2011 -  Sep 2013}
+		\resumeItemListStart
+            \resumeItem{Apache Bigtop}{Maintained rpm/debian packaging for Cloudera's build toolchain and earned committership on the \href{http://bigtop.apache.org/}{Apache Bigtop} project}
+            \resumeItem{Dev and Test}{Scaled OS provisioning and configuration management for multiple operating systems to 850 physical hosts}
+		\resumeItemListEnd
+
+\vspace{5pt}
+    \resumeSubheading
+		{Lime Company}{New York, NY}
+        {Junior Linux Systems Administrator}{Dec 2009 - Dec 2010}
+		\resumeItemListStart
+            \resumeItem{Grapevine}{Assisted in infrastructure planning, coding, and deployment of a new music store application to AWS}
+		\resumeItemListEnd
+
+\vspace{5pt}
+    \resumeSubheading
+		{Amie Street, Inc.}{Long Island City, NY}
+        {Software Engineer}{Jan 2008 - Dec 2009}
+		\resumeItemListStart
+            \resumeItem{EAT}{Developed multiple generations of our music store's content ingestion and backup system, including our integration with a major label}
+		\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-5pt}
+%-----------Awards-----------------
+\section{Honors and Awards}
+\begin{description}[font=$\bullet$]
+    \item {Tiberius Award for Engineering Excellence and Business Impact (First Recipient) - September, 2017}
+
+\end{description}
+
+%-----------EDUCATION-----------------
+\vspace{-5pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Brown University}{Providence, RI}
+      {Computer Science A.B.}{December 2007}
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses:} Operating Systems (CS167 / CS169)}}}
+    \resumeSubHeadingListEnd
+	    
 \end{document}
